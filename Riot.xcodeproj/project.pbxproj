@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		32242F1721E8FBE500725742 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32242F0D21E8FBA900725742 /* Theme.swift */; };
 		32242F1821E8FBF800725742 /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32242F0F21E8FBA900725742 /* DefaultTheme.swift */; };
 		32242F1921E8FBFB00725742 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32242F1021E8FBA900725742 /* DarkTheme.swift */; };
+		322C110822BBC6F80043FEAC /* WidgetManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322C110722BBC6F80043FEAC /* WidgetManagerConfig.swift */; };
 		3232AB1422564D9100AD6A5C /* swiftgen-config.yml in Resources */ = {isa = PBXBuildFile; fileRef = 3232AB0022564D9100AD6A5C /* swiftgen-config.yml */; };
 		3232AB1522564D9100AD6A5C /* flat-swift4-vector.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 3232AB0322564D9100AD6A5C /* flat-swift4-vector.stencil */; };
 		3232AB2122564D9100AD6A5C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3232AB1322564D9100AD6A5C /* README.md */; };
@@ -74,14 +75,21 @@
 		32891D712264DF7B00C82226 /* DeviceVerificationVerifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32891D6F2264DF7B00C82226 /* DeviceVerificationVerifiedViewController.swift */; };
 		32891D75226728EE00C82226 /* DeviceVerificationDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32891D73226728EE00C82226 /* DeviceVerificationDataLoadingViewController.swift */; };
 		32891D76226728EF00C82226 /* DeviceVerificationDataLoadingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32891D74226728EE00C82226 /* DeviceVerificationDataLoadingViewController.storyboard */; };
+		329E746622CD02EA006F9797 /* BubbleReactionActionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329E746422CD02EA006F9797 /* BubbleReactionActionViewCell.xib */; };
+		329E746722CD02EA006F9797 /* BubbleReactionActionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329E746522CD02EA006F9797 /* BubbleReactionActionViewCell.swift */; };
+		32A6001622C661100042C1D9 /* EditHistoryViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6000D22C661100042C1D9 /* EditHistoryViewState.swift */; };
+		32A6001722C661100042C1D9 /* EditHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6000E22C661100042C1D9 /* EditHistoryViewController.swift */; };
+		32A6001822C661100042C1D9 /* EditHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6000F22C661100042C1D9 /* EditHistoryViewModel.swift */; };
+		32A6001922C661100042C1D9 /* EditHistoryViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001022C661100042C1D9 /* EditHistoryViewModelType.swift */; };
+		32A6001A22C661100042C1D9 /* EditHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001122C661100042C1D9 /* EditHistoryCoordinator.swift */; };
+		32A6001B22C661100042C1D9 /* EditHistoryViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001222C661100042C1D9 /* EditHistoryViewAction.swift */; };
+		32A6001C22C661100042C1D9 /* EditHistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A6001322C661100042C1D9 /* EditHistoryViewController.storyboard */; };
+		32A6001D22C661100042C1D9 /* EditHistoryCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001422C661100042C1D9 /* EditHistoryCoordinatorType.swift */; };
+		32A6001E22C661100042C1D9 /* EditHistoryCoordinatorBridgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001522C661100042C1D9 /* EditHistoryCoordinatorBridgePresenter.swift */; };
+		32A6002022C66FCF0042C1D9 /* EditHistoryMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6001F22C66FCF0042C1D9 /* EditHistoryMessage.swift */; };
 		32B1FEDB21A46F2C00637127 /* TermsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B1FEDA21A46F2C00637127 /* TermsView.xib */; };
-		32B94DF8228EC26400716A26 /* ReactionsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF1228EC26400716A26 /* ReactionsMenuView.swift */; };
 		32B94DF9228EC26400716A26 /* ReactionsMenuViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF2228EC26400716A26 /* ReactionsMenuViewAction.swift */; };
 		32B94DFA228EC26400716A26 /* ReactionsMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF3228EC26400716A26 /* ReactionsMenuButton.swift */; };
-		32B94DFB228EC26400716A26 /* ReactionsMenuViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF4228EC26400716A26 /* ReactionsMenuViewModelType.swift */; };
-		32B94DFC228EC26400716A26 /* ReactionsMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF5228EC26400716A26 /* ReactionsMenuViewModel.swift */; };
-		32B94DFD228EC26400716A26 /* ReactionsMenuReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B94DF6228EC26400716A26 /* ReactionsMenuReaction.swift */; };
-		32B94DFE228EC26400716A26 /* ReactionsMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32B94DF7228EC26400716A26 /* ReactionsMenuView.xib */; };
 		32BF994F21FA29A400698084 /* SettingsKeyBackupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF994E21FA29A400698084 /* SettingsKeyBackupViewModel.swift */; };
 		32BF995121FA29DC00698084 /* SettingsKeyBackupViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF995021FA29DC00698084 /* SettingsKeyBackupViewModelType.swift */; };
 		32BF995321FA2A1300698084 /* SettingsKeyBackupViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32BF995221FA2A1300698084 /* SettingsKeyBackupViewState.swift */; };
@@ -145,6 +153,8 @@
 		B140B4A221F87F7100E3F5FE /* OperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140B4A121F87F7100E3F5FE /* OperationQueue.swift */; };
 		B140B4A621F89E7600E3F5FE /* KeyBackupSetupCoordinatorBridgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140B4A521F89E7600E3F5FE /* KeyBackupSetupCoordinatorBridgePresenter.swift */; };
 		B140B4A821F8AB4600E3F5FE /* KeyBackupRecoverCoordinatorBridgePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B140B4A721F8AB4600E3F5FE /* KeyBackupRecoverCoordinatorBridgePresenter.swift */; };
+		B142317A22CCFA2000FFA96A /* EditHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142317822CCFA2000FFA96A /* EditHistoryCell.swift */; };
+		B142317B22CCFA2000FFA96A /* EditHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B142317922CCFA2000FFA96A /* EditHistoryCell.xib */; };
 		B14F142E22144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B14F142622144F6400FA0595 /* KeyBackupRecoverFromRecoveryKeyViewController.storyboard */; };
 		B14F142F22144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F142722144F6400FA0595 /* KeyBackupRecoverFromRecoveryKeyViewModelType.swift */; };
 		B14F143022144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14F142822144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyCoordinatorType.swift */; };
@@ -194,6 +204,9 @@
 		B169331720F3CBE000746532 /* RecentCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = B16932F920F3C51900746532 /* RecentCellData.m */; };
 		B17982FF2119FED2001FD722 /* GDPRConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17982FE2119FED2001FD722 /* GDPRConsentViewController.swift */; };
 		B1798302211B13B3001FD722 /* OnBoardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1798301211B13B3001FD722 /* OnBoardingManager.swift */; };
+		B190F55922CE356800AEB493 /* EditHistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F55822CE356800AEB493 /* EditHistoryHeaderView.swift */; };
+		B190F55B22CE35FD00AEB493 /* EditHistoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B190F55A22CE35FD00AEB493 /* EditHistoryHeaderView.xib */; };
+		B190F55D22CE5A9700AEB493 /* EditHistorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190F55C22CE5A9600AEB493 /* EditHistorySection.swift */; };
 		B1963B2B228F1C4900CBA17F /* BubbleReactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1963B25228F1C4800CBA17F /* BubbleReactionsView.swift */; };
 		B1963B2C228F1C4900CBA17F /* BubbleReactionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1963B26228F1C4800CBA17F /* BubbleReactionViewCell.xib */; };
 		B1963B2D228F1C4900CBA17F /* BubbleReactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1963B27228F1C4800CBA17F /* BubbleReactionsViewModel.swift */; };
@@ -459,6 +472,12 @@
 		B1CA3A2921EF692B000D1D89 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CA3A2821EF692B000D1D89 /* UIView.swift */; };
 		B1CE9EFD22148703000FAE6A /* SignOutAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE9EFC22148703000FAE6A /* SignOutAlertPresenter.swift */; };
 		B1CE9F062216FB09000FAE6A /* EncryptionKeysExportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE9F052216FB09000FAE6A /* EncryptionKeysExportPresenter.swift */; };
+		B1D1BDA622BBAFB500831367 /* ReactionsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D1BDA522BBAFB500831367 /* ReactionsMenuView.swift */; };
+		B1D1BDA822BBAFC900831367 /* ReactionsMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D1BDA722BBAFC900831367 /* ReactionsMenuView.xib */; };
+		B1D211E222BD193C00D939BD /* ReactionsMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D211E122BD193C00D939BD /* ReactionsMenuViewModel.swift */; };
+		B1D211E422C18E3800D939BD /* ReactionsMenuViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D211E322C18E3800D939BD /* ReactionsMenuViewModelType.swift */; };
+		B1D211E622C194A200D939BD /* ReactionsMenuViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D211E522C194A200D939BD /* ReactionsMenuViewState.swift */; };
+		B1D211E822C195B400D939BD /* ReactionMenuItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D211E722C195B400D939BD /* ReactionMenuItemViewData.swift */; };
 		B1D250D82118AA0A000F4E93 /* RoomPredecessorBubbleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D250D72118AA0A000F4E93 /* RoomPredecessorBubbleCell.m */; };
 		B1D4752721EE4E630067973F /* KeyboardAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4752521EE4E620067973F /* KeyboardAvoider.swift */; };
 		B1D4752821EE4E630067973F /* KeyboardNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D4752621EE4E620067973F /* KeyboardNotification.swift */; };
@@ -548,6 +567,7 @@
 		32242F0F21E8FBA900725742 /* DefaultTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
 		32242F1021E8FBA900725742 /* DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		32242F1121E8FBA900725742 /* ThemeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeService.h; sourceTree = "<group>"; };
+		322C110722BBC6F80043FEAC /* WidgetManagerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManagerConfig.swift; sourceTree = "<group>"; };
 		3232AB0022564D9100AD6A5C /* swiftgen-config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "swiftgen-config.yml"; sourceTree = "<group>"; };
 		3232AB0322564D9100AD6A5C /* flat-swift4-vector.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "flat-swift4-vector.stencil"; sourceTree = "<group>"; };
 		3232AB1322564D9100AD6A5C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -604,14 +624,21 @@
 		32891D6F2264DF7B00C82226 /* DeviceVerificationVerifiedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationVerifiedViewController.swift; sourceTree = "<group>"; };
 		32891D73226728EE00C82226 /* DeviceVerificationDataLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceVerificationDataLoadingViewController.swift; sourceTree = "<group>"; };
 		32891D74226728EE00C82226 /* DeviceVerificationDataLoadingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DeviceVerificationDataLoadingViewController.storyboard; sourceTree = "<group>"; };
+		329E746422CD02EA006F9797 /* BubbleReactionActionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleReactionActionViewCell.xib; sourceTree = "<group>"; };
+		329E746522CD02EA006F9797 /* BubbleReactionActionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleReactionActionViewCell.swift; sourceTree = "<group>"; };
+		32A6000D22C661100042C1D9 /* EditHistoryViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryViewState.swift; sourceTree = "<group>"; };
+		32A6000E22C661100042C1D9 /* EditHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryViewController.swift; sourceTree = "<group>"; };
+		32A6000F22C661100042C1D9 /* EditHistoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryViewModel.swift; sourceTree = "<group>"; };
+		32A6001022C661100042C1D9 /* EditHistoryViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryViewModelType.swift; sourceTree = "<group>"; };
+		32A6001122C661100042C1D9 /* EditHistoryCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryCoordinator.swift; sourceTree = "<group>"; };
+		32A6001222C661100042C1D9 /* EditHistoryViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryViewAction.swift; sourceTree = "<group>"; };
+		32A6001322C661100042C1D9 /* EditHistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditHistoryViewController.storyboard; sourceTree = "<group>"; };
+		32A6001422C661100042C1D9 /* EditHistoryCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryCoordinatorType.swift; sourceTree = "<group>"; };
+		32A6001522C661100042C1D9 /* EditHistoryCoordinatorBridgePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHistoryCoordinatorBridgePresenter.swift; sourceTree = "<group>"; };
+		32A6001F22C66FCF0042C1D9 /* EditHistoryMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistoryMessage.swift; sourceTree = "<group>"; };
 		32B1FEDA21A46F2C00637127 /* TermsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsView.xib; sourceTree = "<group>"; };
-		32B94DF1228EC26400716A26 /* ReactionsMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuView.swift; sourceTree = "<group>"; };
 		32B94DF2228EC26400716A26 /* ReactionsMenuViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewAction.swift; sourceTree = "<group>"; };
 		32B94DF3228EC26400716A26 /* ReactionsMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuButton.swift; sourceTree = "<group>"; };
-		32B94DF4228EC26400716A26 /* ReactionsMenuViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewModelType.swift; sourceTree = "<group>"; };
-		32B94DF5228EC26400716A26 /* ReactionsMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewModel.swift; sourceTree = "<group>"; };
-		32B94DF6228EC26400716A26 /* ReactionsMenuReaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactionsMenuReaction.swift; sourceTree = "<group>"; };
-		32B94DF7228EC26400716A26 /* ReactionsMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReactionsMenuView.xib; sourceTree = "<group>"; };
 		32BDC9A1211C2C870064AF51 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32BDC9A2211C2C870064AF51 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Localizable.strings; sourceTree = "<group>"; };
 		32BDC9A3211C2C870064AF51 /* zh_Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_Hant; path = zh_Hant.lproj/Vector.strings; sourceTree = "<group>"; };
@@ -697,6 +724,8 @@
 		B140B4A121F87F7100E3F5FE /* OperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueue.swift; sourceTree = "<group>"; };
 		B140B4A521F89E7600E3F5FE /* KeyBackupSetupCoordinatorBridgePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBackupSetupCoordinatorBridgePresenter.swift; sourceTree = "<group>"; };
 		B140B4A721F8AB4600E3F5FE /* KeyBackupRecoverCoordinatorBridgePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBackupRecoverCoordinatorBridgePresenter.swift; sourceTree = "<group>"; };
+		B142317822CCFA2000FFA96A /* EditHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistoryCell.swift; sourceTree = "<group>"; };
+		B142317922CCFA2000FFA96A /* EditHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHistoryCell.xib; sourceTree = "<group>"; };
 		B14F142622144F6400FA0595 /* KeyBackupRecoverFromRecoveryKeyViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KeyBackupRecoverFromRecoveryKeyViewController.storyboard; sourceTree = "<group>"; };
 		B14F142722144F6400FA0595 /* KeyBackupRecoverFromRecoveryKeyViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBackupRecoverFromRecoveryKeyViewModelType.swift; sourceTree = "<group>"; };
 		B14F142822144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyCoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBackupRecoverFromRecoveryKeyCoordinatorType.swift; sourceTree = "<group>"; };
@@ -794,6 +823,9 @@
 		B169331320F3CAFC00746532 /* PublicRoomsDirectoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicRoomsDirectoryDataSource.h; sourceTree = "<group>"; };
 		B17982FE2119FED2001FD722 /* GDPRConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPRConsentViewController.swift; sourceTree = "<group>"; };
 		B1798301211B13B3001FD722 /* OnBoardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingManager.swift; sourceTree = "<group>"; };
+		B190F55822CE356800AEB493 /* EditHistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistoryHeaderView.swift; sourceTree = "<group>"; };
+		B190F55A22CE35FD00AEB493 /* EditHistoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditHistoryHeaderView.xib; sourceTree = "<group>"; };
+		B190F55C22CE5A9600AEB493 /* EditHistorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHistorySection.swift; sourceTree = "<group>"; };
 		B1963B25228F1C4800CBA17F /* BubbleReactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleReactionsView.swift; sourceTree = "<group>"; };
 		B1963B26228F1C4800CBA17F /* BubbleReactionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleReactionViewCell.xib; sourceTree = "<group>"; };
 		B1963B27228F1C4800CBA17F /* BubbleReactionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleReactionsViewModel.swift; sourceTree = "<group>"; };
@@ -1195,6 +1227,12 @@
 		B1CA3A2821EF692B000D1D89 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B1CE9EFC22148703000FAE6A /* SignOutAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutAlertPresenter.swift; sourceTree = "<group>"; };
 		B1CE9F052216FB09000FAE6A /* EncryptionKeysExportPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionKeysExportPresenter.swift; sourceTree = "<group>"; };
+		B1D1BDA522BBAFB500831367 /* ReactionsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsMenuView.swift; sourceTree = "<group>"; };
+		B1D1BDA722BBAFC900831367 /* ReactionsMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionsMenuView.xib; sourceTree = "<group>"; };
+		B1D211E122BD193C00D939BD /* ReactionsMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewModel.swift; sourceTree = "<group>"; };
+		B1D211E322C18E3800D939BD /* ReactionsMenuViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewModelType.swift; sourceTree = "<group>"; };
+		B1D211E522C194A200D939BD /* ReactionsMenuViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionsMenuViewState.swift; sourceTree = "<group>"; };
+		B1D211E722C195B400D939BD /* ReactionMenuItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionMenuItemViewData.swift; sourceTree = "<group>"; };
 		B1D250D62118AA0A000F4E93 /* RoomPredecessorBubbleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoomPredecessorBubbleCell.h; sourceTree = "<group>"; };
 		B1D250D72118AA0A000F4E93 /* RoomPredecessorBubbleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoomPredecessorBubbleCell.m; sourceTree = "<group>"; };
 		B1D4752521EE4E620067973F /* KeyboardAvoider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardAvoider.swift; sourceTree = "<group>"; };
@@ -1505,16 +1543,39 @@
 			path = js;
 			sourceTree = "<group>";
 		};
+		32A6000C22C661100042C1D9 /* EditHistory */ = {
+			isa = PBXGroup;
+			children = (
+				32A6000D22C661100042C1D9 /* EditHistoryViewState.swift */,
+				32A6000E22C661100042C1D9 /* EditHistoryViewController.swift */,
+				32A6001322C661100042C1D9 /* EditHistoryViewController.storyboard */,
+				B190F55822CE356800AEB493 /* EditHistoryHeaderView.swift */,
+				B190F55A22CE35FD00AEB493 /* EditHistoryHeaderView.xib */,
+				B142317822CCFA2000FFA96A /* EditHistoryCell.swift */,
+				B142317922CCFA2000FFA96A /* EditHistoryCell.xib */,
+				32A6000F22C661100042C1D9 /* EditHistoryViewModel.swift */,
+				32A6001022C661100042C1D9 /* EditHistoryViewModelType.swift */,
+				32A6001122C661100042C1D9 /* EditHistoryCoordinator.swift */,
+				32A6001222C661100042C1D9 /* EditHistoryViewAction.swift */,
+				32A6001422C661100042C1D9 /* EditHistoryCoordinatorType.swift */,
+				32A6001522C661100042C1D9 /* EditHistoryCoordinatorBridgePresenter.swift */,
+				B190F55C22CE5A9600AEB493 /* EditHistorySection.swift */,
+				32A6001F22C66FCF0042C1D9 /* EditHistoryMessage.swift */,
+			);
+			path = EditHistory;
+			sourceTree = "<group>";
+		};
 		32B94DF0228EC26400716A26 /* ReactionsMenu */ = {
 			isa = PBXGroup;
 			children = (
-				32B94DF1228EC26400716A26 /* ReactionsMenuView.swift */,
+				B1D211E322C18E3800D939BD /* ReactionsMenuViewModelType.swift */,
+				B1D211E122BD193C00D939BD /* ReactionsMenuViewModel.swift */,
+				B1D211E722C195B400D939BD /* ReactionMenuItemViewData.swift */,
+				B1D1BDA522BBAFB500831367 /* ReactionsMenuView.swift */,
+				B1D1BDA722BBAFC900831367 /* ReactionsMenuView.xib */,
+				B1D211E522C194A200D939BD /* ReactionsMenuViewState.swift */,
 				32B94DF2228EC26400716A26 /* ReactionsMenuViewAction.swift */,
 				32B94DF3228EC26400716A26 /* ReactionsMenuButton.swift */,
-				32B94DF4228EC26400716A26 /* ReactionsMenuViewModelType.swift */,
-				32B94DF5228EC26400716A26 /* ReactionsMenuViewModel.swift */,
-				32B94DF6228EC26400716A26 /* ReactionsMenuReaction.swift */,
-				32B94DF7228EC26400716A26 /* ReactionsMenuView.xib */,
 			);
 			path = ReactionsMenu;
 			sourceTree = "<group>";
@@ -1959,6 +2020,8 @@
 		B1963B24228F1C4800CBA17F /* BubbleReactions */ = {
 			isa = PBXGroup;
 			children = (
+				329E746522CD02EA006F9797 /* BubbleReactionActionViewCell.swift */,
+				329E746422CD02EA006F9797 /* BubbleReactionActionViewCell.xib */,
 				B1963B31228F1C6B00CBA17F /* BubbleReactionsViewModelType.swift */,
 				B1963B27228F1C4800CBA17F /* BubbleReactionsViewModel.swift */,
 				B1963B25228F1C4800CBA17F /* BubbleReactionsView.swift */,
@@ -2080,6 +2143,7 @@
 		B1B5568E20EE6C4C00210D55 /* Room */ = {
 			isa = PBXGroup;
 			children = (
+				32A6000C22C661100042C1D9 /* EditHistory */,
 				B1B5568F20EE6C4C00210D55 /* RoomViewController.h */,
 				B1B556A020EE6C4C00210D55 /* RoomViewController.m */,
 				B1B5569620EE6C4C00210D55 /* RoomViewController.xib */,
@@ -3042,6 +3106,7 @@
 				B1B5598420EFC3DF00210D55 /* WidgetManager.m */,
 				B1B5598120EFC3DF00210D55 /* Widget.h */,
 				B1B5598320EFC3DF00210D55 /* Widget.m */,
+				322C110722BBC6F80043FEAC /* WidgetManagerConfig.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -3412,7 +3477,7 @@
 					24CBEC4D1F0EAD310093EABB = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7J4U792NQT;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -3433,7 +3498,7 @@
 					F094A9A11B78D8F000B1FBBF = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 7J4U792NQT;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -3553,7 +3618,9 @@
 				B1B558DA20EF768F00210D55 /* RoomOutgoingEncryptedTextMsgWithoutSenderInfoBubbleCell.xib in Resources */,
 				B1B558D620EF768F00210D55 /* RoomOutgoingEncryptedTextMsgWithPaginationTitleWithoutSenderNameBubbleCell.xib in Resources */,
 				B1B5593720EF7BAC00210D55 /* TableViewCellWithCheckBoxAndLabel.xib in Resources */,
+				B190F55B22CE35FD00AEB493 /* EditHistoryHeaderView.xib in Resources */,
 				B1B5579020EF568D00210D55 /* GroupTableViewCell.xib in Resources */,
+				B142317B22CCFA2000FFA96A /* EditHistoryCell.xib in Resources */,
 				B1B5581B20EF625800210D55 /* ExpandedRoomTitleView.xib in Resources */,
 				B1B558C220EF768F00210D55 /* RoomIncomingEncryptedTextMsgBubbleCell.xib in Resources */,
 				B1B558F620EF768F00210D55 /* RoomOutgoingTextMsgBubbleCell.xib in Resources */,
@@ -3563,6 +3630,7 @@
 				B1B5574320EE6C4D00210D55 /* CallViewController.xib in Resources */,
 				F083BDEA1E7009ED00A9B29C /* ringback.mp3 in Resources */,
 				F083BDF21E7009ED00A9B29C /* GoogleService-Info.plist in Resources */,
+				329E746622CD02EA006F9797 /* BubbleReactionActionViewCell.xib in Resources */,
 				B1B558E320EF768F00210D55 /* RoomEmptyBubbleCell.xib in Resources */,
 				B1E5368F21FB7258001F3AFF /* KeyBackupRecoverFromPassphraseViewController.storyboard in Resources */,
 				B1B5590420EF768F00210D55 /* RoomOutgoingAttachmentBubbleCell.xib in Resources */,
@@ -3575,7 +3643,6 @@
 				B1107ECA2200B09F0038014B /* KeyBackupRecoverSuccessViewController.storyboard in Resources */,
 				B1B5579C20EF575B00210D55 /* ForgotPasswordInputsView.xib in Resources */,
 				F083BE011E7009ED00A9B29C /* third_party_licenses.html in Resources */,
-				32B94DFE228EC26400716A26 /* ReactionsMenuView.xib in Resources */,
 				B1098BFC21ECFE65000DDA48 /* PasswordStrengthView.xib in Resources */,
 				B1B5573720EE6C4D00210D55 /* GroupParticipantsViewController.xib in Resources */,
 				B110872421F098F0003554A5 /* ActivityIndicatorView.xib in Resources */,
@@ -3598,6 +3665,7 @@
 				3232AB1422564D9100AD6A5C /* swiftgen-config.yml in Resources */,
 				324A204F225FC571004FE8B0 /* DeviceVerificationIncomingViewController.storyboard in Resources */,
 				3232AB4B2256558300AD6A5C /* TemplateScreenViewController.storyboard in Resources */,
+				B1D1BDA822BBAFC900831367 /* ReactionsMenuView.xib in Resources */,
 				32B1FEDB21A46F2C00637127 /* TermsView.xib in Resources */,
 				B1B5578E20EF568D00210D55 /* GroupInviteTableViewCell.xib in Resources */,
 				B1B5582020EF625800210D55 /* SimpleRoomTitleView.xib in Resources */,
@@ -3615,6 +3683,7 @@
 				B1B557C020EF5B4500210D55 /* RoomInputToolbarView.xib in Resources */,
 				B1B5583D20EF6E7F00210D55 /* GroupRoomTableViewCell.xib in Resources */,
 				B1B5572D20EE6C4D00210D55 /* RoomParticipantsViewController.xib in Resources */,
+				32A6001C22C661100042C1D9 /* EditHistoryViewController.storyboard in Resources */,
 				B1B5577220EE702800210D55 /* JitsiViewController.xib in Resources */,
 				B1B557D720EF5EA900210D55 /* RoomActivitiesView.xib in Resources */,
 				B1098BF821ECFE65000DDA48 /* KeyBackupSetupPassphraseViewController.storyboard in Resources */,
@@ -3679,54 +3748,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RiotPods-Riot/Pods-RiotPods-Riot-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/DGCollectionViewLeftAlignFlowLayout/DGCollectionViewLeftAlignFlowLayout.framework",
-				"${BUILT_PRODUCTS_DIR}/DTCoreText/DTCoreText.framework",
-				"${BUILT_PRODUCTS_DIR}/DTFoundation/DTFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/GBDeviceInfo/GBDeviceInfo.framework",
-				"${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework",
-				"${BUILT_PRODUCTS_DIR}/HPGrowingTextView/HPGrowingTextView.framework",
-				"${PODS_ROOT}/JitsiMeetSDK/Frameworks/JitsiMeet.framework",
-				"${PODS_ROOT}/JitsiMeetSDK/Frameworks/WebRTC.framework",
-				"${BUILT_PRODUCTS_DIR}/MatrixKit/MatrixKit.framework",
-				"${BUILT_PRODUCTS_DIR}/MatrixSDK.common-JingleCallStack/MatrixSDK.framework",
-				"${BUILT_PRODUCTS_DIR}/OLMKit/OLMKit.framework",
-				"${BUILT_PRODUCTS_DIR}/PiwikTracker/PiwikTracker.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
-				"${BUILT_PRODUCTS_DIR}/cmark/cmark.framework",
-				"${BUILT_PRODUCTS_DIR}/libPhoneNumber-iOS/libPhoneNumber_iOS.framework",
-				"${BUILT_PRODUCTS_DIR}/libbase58/libbase58.framework",
-				"${BUILT_PRODUCTS_DIR}/zxcvbn-ios/zxcvbn_ios.framework",
-				"${BUILT_PRODUCTS_DIR}/DTCoreText.default-Extension/DTCoreText.framework",
-				"${BUILT_PRODUCTS_DIR}/MatrixKit-AppExtension/MatrixKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RiotPods-Riot/Pods-RiotPods-Riot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DGCollectionViewLeftAlignFlowLayout.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTCoreText.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DTFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GBDeviceInfo.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GZIP.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPGrowingTextView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JitsiMeet.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WebRTC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MatrixKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MatrixSDK.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OLMKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PiwikTracker.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cmark.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libPhoneNumber_iOS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libbase58.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/zxcvbn_ios.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-RiotPods-Riot/Pods-RiotPods-Riot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3946,9 +3972,11 @@
 				B1B558C320EF768F00210D55 /* RoomIncomingEncryptedTextMsgWithoutSenderNameBubbleCell.m in Sources */,
 				B110872521F098F0003554A5 /* ActivityIndicatorPresenter.swift in Sources */,
 				32242F1521E8FBA900725742 /* DarkTheme.swift in Sources */,
+				B1D211E222BD193C00D939BD /* ReactionsMenuViewModel.swift in Sources */,
 				B140B4A621F89E7600E3F5FE /* KeyBackupSetupCoordinatorBridgePresenter.swift in Sources */,
 				B1B5577420EE702900210D55 /* WidgetViewController.m in Sources */,
 				B139C21B21FE5B9200BB68EC /* KeyBackupRecoverFromPassphraseViewModel.swift in Sources */,
+				32A6001E22C661100042C1D9 /* EditHistoryCoordinatorBridgePresenter.swift in Sources */,
 				B1B5574A20EE6C4D00210D55 /* MediaPickerViewController.m in Sources */,
 				B1B5598520EFC3E000210D55 /* RageShakeManager.m in Sources */,
 				3232ABA8225730E100AD6A5C /* DeviceVerificationStartViewState.swift in Sources */,
@@ -3982,7 +4010,6 @@
 				B1B5594520EF7BD000210D55 /* TableViewCellWithCollectionView.m in Sources */,
 				32891D75226728EE00C82226 /* DeviceVerificationDataLoadingViewController.swift in Sources */,
 				32891D712264DF7B00C82226 /* DeviceVerificationVerifiedViewController.swift in Sources */,
-				32B94DFB228EC26400716A26 /* ReactionsMenuViewModelType.swift in Sources */,
 				F083BDEF1E7009ED00A9B29C /* UINavigationController+Riot.m in Sources */,
 				B1B5581F20EF625800210D55 /* SimpleRoomTitleView.m in Sources */,
 				B1C562E2228C7C8D0037F12A /* RoomContextualMenuViewController.swift in Sources */,
@@ -3996,9 +4023,11 @@
 				B1B558DD20EF768F00210D55 /* RoomIncomingEncryptedTextMsgBubbleCell.m in Sources */,
 				B1098BE521ECE1FC000DDA48 /* Storyboards.swift in Sources */,
 				3232ABC2225B996200AD6A5C /* Themable.swift in Sources */,
+				32A6001B22C661100042C1D9 /* EditHistoryViewAction.swift in Sources */,
 				3232ABA7225730E100AD6A5C /* DeviceVerificationStartCoordinator.swift in Sources */,
 				B1D4752721EE4E630067973F /* KeyboardAvoider.swift in Sources */,
 				B1D4752821EE4E630067973F /* KeyboardNotification.swift in Sources */,
+				B1D1BDA622BBAFB500831367 /* ReactionsMenuView.swift in Sources */,
 				B1B5573C20EE6C4D00210D55 /* MasterTabBarController.m in Sources */,
 				32F6B96E2270623100BBA352 /* DeviceVerificationDataLoadingViewModelType.swift in Sources */,
 				B1B5592C20EF7A5D00210D55 /* TableViewCellWithButton.m in Sources */,
@@ -4010,6 +4039,7 @@
 				B1B558E420EF768F00210D55 /* RoomMembershipWithPaginationTitleBubbleCell.m in Sources */,
 				B1B5573620EE6C4D00210D55 /* GroupsViewController.m in Sources */,
 				3232ABB82257BE6500AD6A5C /* DeviceVerificationVerifyCoordinator.swift in Sources */,
+				B142317A22CCFA2000FFA96A /* EditHistoryCell.swift in Sources */,
 				B1B5572A20EE6C4D00210D55 /* RoomMemberDetailsViewController.m in Sources */,
 				B1B5590120EF768F00210D55 /* RoomMembershipExpandedWithPaginationTitleBubbleCell.m in Sources */,
 				32F6B96B2270623100BBA352 /* DeviceVerificationDataLoadingViewAction.swift in Sources */,
@@ -4030,6 +4060,7 @@
 				B1B5593C20EF7BAC00210D55 /* TableViewCellWithCheckBoxes.m in Sources */,
 				32891D6B2264CBA300C82226 /* SimpleScreenTemplateViewController.swift in Sources */,
 				B1CA3A2721EF6914000D1D89 /* UIViewController.swift in Sources */,
+				322C110822BBC6F80043FEAC /* WidgetManagerConfig.swift in Sources */,
 				F0D2ADA11F6AA5FD00A7097D /* MXRoomSummary+Riot.m in Sources */,
 				B1B5596F20EFA85D00210D55 /* EncryptionInfoView.m in Sources */,
 				B1B5573820EE6C4D00210D55 /* GroupParticipantsViewController.m in Sources */,
@@ -4037,14 +4068,12 @@
 				3232ABAB225730E100AD6A5C /* DeviceVerificationCoordinator.swift in Sources */,
 				B1B5583E20EF6E7F00210D55 /* GroupRoomTableViewCell.m in Sources */,
 				B14F143522144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyViewController.swift in Sources */,
-				32B94DF8228EC26400716A26 /* ReactionsMenuView.swift in Sources */,
 				B1B5574F20EE6C4D00210D55 /* RoomsViewController.m in Sources */,
 				B1B5572520EE6C4D00210D55 /* RoomMessagesSearchViewController.m in Sources */,
 				B139C22121FE5D9D00BB68EC /* KeyBackupRecoverFromPassphraseViewState.swift in Sources */,
 				B1B5579120EF568D00210D55 /* GroupInviteTableViewCell.m in Sources */,
 				B1B5579A20EF575B00210D55 /* ForgotPasswordInputsView.m in Sources */,
 				B1B12B2922942315002CB419 /* UITouch.swift in Sources */,
-				32B94DFD228EC26400716A26 /* ReactionsMenuReaction.swift in Sources */,
 				B1B558CC20EF768F00210D55 /* RoomOutgoingEncryptedAttachmentWithoutSenderInfoBubbleCell.m in Sources */,
 				B1B5571D20EE6C4D00210D55 /* HomeViewController.m in Sources */,
 				3232ABA6225730E100AD6A5C /* DeviceVerificationStartViewController.swift in Sources */,
@@ -4061,6 +4090,7 @@
 				B1B5572620EE6C4D00210D55 /* RoomFilesSearchViewController.m in Sources */,
 				B1B5583120EF66BA00210D55 /* RoomIdOrAliasTableViewCell.m in Sources */,
 				B1CA3A2921EF692B000D1D89 /* UIView.swift in Sources */,
+				32A6001D22C661100042C1D9 /* EditHistoryCoordinatorType.swift in Sources */,
 				F083BDFA1E7009ED00A9B29C /* RoomPreviewData.m in Sources */,
 				B1B557B420EF5AEF00210D55 /* EventDetailsView.m in Sources */,
 				B1B5577E20EE84BF00210D55 /* IncomingCallView.m in Sources */,
@@ -4078,6 +4108,7 @@
 				B1C562CA2289C2690037F12A /* UIGestureRecognizer.swift in Sources */,
 				B1C562CC228AB3510037F12A /* UIStackView.swift in Sources */,
 				B1B557BE20EF5B4500210D55 /* RoomInputToolbarView.m in Sources */,
+				32A6001922C661100042C1D9 /* EditHistoryViewModelType.swift in Sources */,
 				B1B5573B20EE6C4D00210D55 /* FavouritesViewController.m in Sources */,
 				B1B5579920EF575B00210D55 /* AuthInputsView.m in Sources */,
 				B1B5597520EFB02A00210D55 /* InviteRecentTableViewCell.m in Sources */,
@@ -4086,10 +4117,13 @@
 				B1B5573520EE6C4D00210D55 /* GroupDetailsViewController.m in Sources */,
 				B10B3B5B2201DD740072C76B /* KeyBackupBannerCell.swift in Sources */,
 				B1963B32228F1C6B00CBA17F /* BubbleReactionsViewModelType.swift in Sources */,
+				32A6001722C661100042C1D9 /* EditHistoryViewController.swift in Sources */,
 				B1098BFA21ECFE65000DDA48 /* KeyBackupSetupPassphraseViewModel.swift in Sources */,
 				B1B5575220EE6C4D00210D55 /* RoomKeyRequestViewController.m in Sources */,
+				32A6001A22C661100042C1D9 /* EditHistoryCoordinator.swift in Sources */,
 				F083BD1E1E7009ED00A9B29C /* AppDelegate.m in Sources */,
 				B1B558E620EF768F00210D55 /* RoomIncomingAttachmentWithoutSenderInfoBubbleCell.m in Sources */,
+				329E746722CD02EA006F9797 /* BubbleReactionActionViewCell.swift in Sources */,
 				B1098BFB21ECFE65000DDA48 /* KeyBackupSetupCoordinatorType.swift in Sources */,
 				B1098BF721ECFE65000DDA48 /* PasswordStrength.swift in Sources */,
 				324A2052225FC571004FE8B0 /* DeviceVerificationIncomingViewAction.swift in Sources */,
@@ -4097,11 +4131,13 @@
 				B1B557D820EF5EA900210D55 /* RoomActivitiesView.m in Sources */,
 				B1B5596620EF9E9B00210D55 /* RoomTableViewCell.m in Sources */,
 				B14F143322144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyViewModel.swift in Sources */,
+				32A6001822C661100042C1D9 /* EditHistoryViewModel.swift in Sources */,
 				B1B558D020EF768F00210D55 /* RoomOutgoingEncryptedTextMsgWithPaginationTitleWithoutSenderNameBubbleCell.m in Sources */,
 				B1B558CF20EF768F00210D55 /* RoomIncomingEncryptedTextMsgWithPaginationTitleBubbleCell.m in Sources */,
 				B140B4A221F87F7100E3F5FE /* OperationQueue.swift in Sources */,
 				B1B5575120EE6C4D00210D55 /* AuthenticationViewController.m in Sources */,
 				B1B5571820EE6C4D00210D55 /* CountryPickerViewController.m in Sources */,
+				B1D211E622C194A200D939BD /* ReactionsMenuViewState.swift in Sources */,
 				B17982FF2119FED2001FD722 /* GDPRConsentViewController.swift in Sources */,
 				B1098BE121ECE09F000DDA48 /* Images.swift in Sources */,
 				3232ABA4225730E100AD6A5C /* DeviceVerificationStartViewAction.swift in Sources */,
@@ -4153,25 +4189,29 @@
 				B16932EE20F3C3C900746532 /* FilesSearchCellData.m in Sources */,
 				B1B558E520EF768F00210D55 /* RoomMembershipExpandedBubbleCell.m in Sources */,
 				32BF995121FA29DC00698084 /* SettingsKeyBackupViewModelType.swift in Sources */,
+				B190F55922CE356800AEB493 /* EditHistoryHeaderView.swift in Sources */,
 				32F6B96A2270623100BBA352 /* DeviceVerificationDataLoadingViewState.swift in Sources */,
 				32BF995321FA2A1300698084 /* SettingsKeyBackupViewState.swift in Sources */,
 				32B94DF9228EC26400716A26 /* ReactionsMenuViewAction.swift in Sources */,
 				B1B5599420EFC5E400210D55 /* DecryptionFailureTracker.m in Sources */,
 				F083BDF01E7009ED00A9B29C /* UIViewController+RiotSearch.m in Sources */,
 				F083BDF91E7009ED00A9B29C /* RoomEmailInvitation.m in Sources */,
+				B1D211E422C18E3800D939BD /* ReactionsMenuViewModelType.swift in Sources */,
 				324A2055225FC571004FE8B0 /* DeviceVerificationIncomingViewModelType.swift in Sources */,
 				B1B5572C20EE6C4D00210D55 /* RoomParticipantsViewController.m in Sources */,
 				B1B558EE20EF768F00210D55 /* RoomOutgoingAttachmentBubbleCell.m in Sources */,
 				3232ABB52257BE6400AD6A5C /* DeviceVerificationVerifyCoordinatorType.swift in Sources */,
 				32BF994F21FA29A400698084 /* SettingsKeyBackupViewModel.swift in Sources */,
+				B190F55D22CE5A9700AEB493 /* EditHistorySection.swift in Sources */,
+				32A6002022C66FCF0042C1D9 /* EditHistoryMessage.swift in Sources */,
 				B1B5574920EE6C4D00210D55 /* RiotSplitViewController.m in Sources */,
 				B1B5574E20EE6C4D00210D55 /* DirectoryServerPickerViewController.m in Sources */,
+				B1D211E822C195B400D939BD /* ReactionMenuItemViewData.swift in Sources */,
 				B1DB4F0B223131600065DBFA /* String.swift in Sources */,
 				3232AB522256558300AD6A5C /* TemplateScreenViewModel.swift in Sources */,
 				B1B5575B20EE6C4D00210D55 /* HomeFilesSearchViewController.m in Sources */,
 				B139C22521FF01C100BB68EC /* KeyBackupRecoverFromPassphraseCoordinator.swift in Sources */,
 				B1098BFD21ECFE65000DDA48 /* PasswordStrengthManager.swift in Sources */,
-				32B94DFC228EC26400716A26 /* ReactionsMenuViewModel.swift in Sources */,
 				B1B558F520EF768F00210D55 /* RoomOutgoingTextMsgWithPaginationTitleBubbleCell.m in Sources */,
 				3232AB482256558300AD6A5C /* FlowTemplateCoordinatorType.swift in Sources */,
 				B1B558F820EF768F00210D55 /* RoomIncomingTextMsgWithPaginationTitleWithoutSenderNameBubbleCell.m in Sources */,
@@ -4189,6 +4229,7 @@
 				B1C562E8228C7CF20037F12A /* ContextualMenuItemView.swift in Sources */,
 				B14F143022144F6500FA0595 /* KeyBackupRecoverFromRecoveryKeyCoordinatorType.swift in Sources */,
 				B1E5368921FB1E20001F3AFF /* UIButton.swift in Sources */,
+				32A6001622C661100042C1D9 /* EditHistoryViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4341,7 +4382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/SupportingFiles/RiotShareExtension-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Debug;
@@ -4381,7 +4422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/SupportingFiles/RiotShareExtension-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
@@ -4584,7 +4625,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/SupportingFiles/Riot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};
@@ -4615,7 +4656,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = im.vector.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/SupportingFiles/Riot-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 			};

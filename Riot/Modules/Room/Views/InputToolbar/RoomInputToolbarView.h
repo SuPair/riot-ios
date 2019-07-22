@@ -25,6 +25,7 @@ typedef enum : NSUInteger
 {
     RoomInputToolbarViewSendModeSend,
     RoomInputToolbarViewSendModeReply,
+    RoomInputToolbarViewSendModeEdit
 } RoomInputToolbarViewSendMode;
 
 
@@ -37,6 +38,13 @@ typedef enum : NSUInteger
  */
 - (void)roomInputToolbarViewPresentStickerPicker:(MXKRoomInputToolbarView*)toolbarView;
 
+/**
+ Tells the delegate that the user wants to send external files.
+ 
+ @param toolbarView the room input toolbar view
+ */
+- (void)roomInputToolbarViewDidTapFileUpload:(MXKRoomInputToolbarView*)toolbarView;
+
 @end
 
 /**
@@ -48,7 +56,7 @@ typedef enum : NSUInteger
 /**
  The delegate notified when inputs are ready.
  */
-@property (nonatomic) id<RoomInputToolbarViewDelegate> delegate;
+@property (nonatomic, weak) id<RoomInputToolbarViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIView *mainToolbarView;
 

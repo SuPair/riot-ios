@@ -65,4 +65,29 @@ typedef NS_ENUM(NSInteger, RoomBubbleCellDataTag)
  */
 @property(nonatomic, readonly) NSInteger selectedComponentIndex;
 
+/**
+ Return additional content height (read receipts, reactions).
+ */
+@property(nonatomic, readonly) CGFloat additionalContentHeight;
+
+/**
+ Indicate to update additional content height.
+ */
+- (void)setNeedsUpdateAdditionalContentHeight;
+
+/**
+ Update additional content height if needed.
+ */
+- (void)updateAdditionalContentHeightIfNeeded;
+
+/**
+ The index of the first visible component. NSNotFound by default.
+ */
+- (NSInteger)firstVisibleComponentIndex;
+
+#pragma mark - Show all reactions
+
+- (BOOL)showAllReactionsForEvent:(NSString*)eventId;
+- (void)setShowAllReactions:(BOOL)showAllReactions forEvent:(NSString*)eventId;
+
 @end

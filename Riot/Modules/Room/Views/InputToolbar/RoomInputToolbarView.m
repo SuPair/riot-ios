@@ -172,7 +172,9 @@
         case RoomInputToolbarViewSendModeReply:
             title = NSLocalizedStringFromTable(@"room_action_reply", @"Vector", nil);
             break;
-
+        case RoomInputToolbarViewSendModeEdit:
+            title = NSLocalizedStringFromTable(@"save", @"Vector", nil);
+            break;
         default:
             title = [NSBundle mxk_localizedStringForKey:@"send"];
             break;
@@ -346,6 +348,19 @@
                                                                   [self.delegate roomInputToolbarViewPresentStickerPicker:self];
                                                               }
 
+                                                          }]];
+            
+            [actionSheet addAction:[UIAlertAction actionWithTitle:NSLocalizedStringFromTable(@"room_action_send_file", @"Vector", nil)
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              
+                                                              if (weakSelf)
+                                                              {
+                                                                  typeof(self) self = weakSelf;
+                                                                  self->actionSheet = nil;
+                                                                  
+                                                                  [self.delegate roomInputToolbarViewDidTapFileUpload:self];
+                                                              }
                                                           }]];
 
             [actionSheet addAction:[UIAlertAction actionWithTitle:[NSBundle mxk_localizedStringForKey:@"cancel"]

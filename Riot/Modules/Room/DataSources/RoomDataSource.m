@@ -61,7 +61,7 @@
         self.markTimelineInitialEvent = NO;
         
         self.showBubbleDateTimeOnSelection = YES;
-        self.showReactions = RiotSettings.shared.messageReaction;
+        self.showReactions = YES;
         
         // Observe user interface theme change.
         kThemeServiceDidChangeThemeNotificationObserver = [[NSNotificationCenter defaultCenter] addObserverForName:kThemeServiceDidChangeThemeNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notif) {
@@ -120,87 +120,29 @@
     [super destroy];
 }
 
-- (void)didReceiveReceiptEvent:(MXEvent *)receiptEvent roomState:(MXRoomState *)roomState
+- (void)updateCellDataReactions:(id<MXKRoomBubbleCellDataStoring>)cellData forEventId:(NSString*)eventId
 {
-    // Do the processing on the same processing queue as MXKRoomDataSource
-    dispatch_async(MXKRoomDataSource.processingQueue, ^{
+    [super updateCellDataReactions:cellData forEventId:eventId];
 
-        // Remove the previous displayed read receipt for each user who sent a
-        // new read receipt.
-        // To implement it, we need to find the sender id of each new read receipt
-        // among the read receipts array of all events in all bubbles.
-        NSArray *readReceiptSenders = receiptEvent.readReceiptSenders;
+    [self setNeedsUpdateAdditionalContentHeightForCellData:cellData];
+}
 
-        @synchronized(bubbles)
-        {
-            for (RoomBubbleCellData *cellData in bubbles)
-            {
-                NSMutableDictionary<NSString* /* eventId */, NSArray<MXReceiptData*> *> *updatedCellDataReadReceipts = [NSMutableDictionary dictionary];
+- (void)updateCellData:(MXKRoomBubbleCellData*)cellData withReadReceipts:(NSArray<MXReceiptData*>*)readReceipts forEventId:(NSString*)eventId
+{
+    [super updateCellData:cellData withReadReceipts:readReceipts forEventId:eventId];
+    
+    [self setNeedsUpdateAdditionalContentHeightForCellData:cellData];
+}
 
-                for (NSString *eventId in cellData.readReceipts)
-                {
-                    for (MXReceiptData *receiptData in cellData.readReceipts[eventId])
-                    {
-                        for (NSString *senderId in readReceiptSenders)
-                        {
-                            if ([receiptData.userId isEqualToString:senderId])
-                            {
-                                 if (!updatedCellDataReadReceipts[eventId])
-                                {
-                                    updatedCellDataReadReceipts[eventId] = cellData.readReceipts[eventId];
-                                }
-
-                                NSPredicate *predicate = [NSPredicate predicateWithFormat:@"userId!=%@", receiptData.userId];
-                                updatedCellDataReadReceipts[eventId] = [updatedCellDataReadReceipts[eventId] filteredArrayUsingPredicate:predicate];
-                                break;
-                            }
-                        }
-
-                    }
-                }
-
-                // Flush found changed to the cell data
-                for (NSString *eventId in updatedCellDataReadReceipts)
-                {
-                    if (updatedCellDataReadReceipts[eventId].count)
-                    {
-                        cellData.readReceipts[eventId] = updatedCellDataReadReceipts[eventId];
-                    }
-                    else
-                    {
-                        cellData.readReceipts[eventId] = nil;
-                    }
-                }
-            }
-        }
-
-        // Update cell data we have received a read receipt for
-        NSArray *readEventIds = receiptEvent.readReceiptEventIds;
-        for (NSString* eventId in readEventIds)
-        {
-            RoomBubbleCellData *cellData = [self cellDataOfEventWithEventId:eventId];
-            if (cellData)
-            {
-                @synchronized(bubbles)
-                {
-                    if (!cellData.hasNoDisplay)
-                    {
-                        cellData.readReceipts[eventId] = [self.room getEventReceipts:eventId sorted:YES];
-                    }
-                    else
-                    {
-                        // Ignore the read receipts on the events without an actual display.
-                        cellData.readReceipts[eventId] = nil;
-                    }
-                }
-            }
-        }
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // TODO: Be smarter and update only updated cells
-            [super didReceiveReceiptEvent:receiptEvent roomState:roomState];
-        });
-    });
+- (void)setNeedsUpdateAdditionalContentHeightForCellData:(id<MXKRoomBubbleCellDataStoring>)cellData
+{
+    RoomBubbleCellData *roomBubbleCellData;
+    
+    if ([cellData isKindOfClass:[RoomBubbleCellData class]])
+    {
+        roomBubbleCellData = (RoomBubbleCellData*)cellData;
+        [roomBubbleCellData setNeedsUpdateAdditionalContentHeight];
+    }
 }
 
 #pragma  mark -
@@ -265,6 +207,8 @@
             [bubbleCell addTimestampLabelForComponent:cellData.mostRecentComponentIndex];
         }
         
+        NSMutableArray *temporaryViews = [NSMutableArray new];
+        
         // Handle read receipts and read marker display.
         // Ignore the read receipts on the bubble without actual display.
         // Ignore the read receipts on collapsed bubbles
@@ -300,11 +244,16 @@
                     
                     if (reactions && !isCollapsableCellCollapsed)
                     {
-                        BubbleReactionsViewModel *bubbleReactionsViewModel = [[BubbleReactionsViewModel alloc] initWithAggregatedReactions:reactions eventId:componentEventId];
+                        BOOL showAllReactions = [cellData showAllReactionsForEvent:componentEventId];
+                        BubbleReactionsViewModel *bubbleReactionsViewModel = [[BubbleReactionsViewModel alloc] initWithAggregatedReactions:reactions
+                                                                                                                                   eventId:componentEventId
+                                                                                                                                   showAll:showAllReactions];
                         
                         reactionsView = [BubbleReactionsView new];
                         reactionsView.viewModel = bubbleReactionsViewModel;
                         [reactionsView updateWithTheme:ThemeService.shared.theme];
+                        
+                        [temporaryViews addObject:reactionsView];
                         
                         bubbleReactionsViewModel.viewModelDelegate = self;
                         
@@ -386,6 +335,8 @@
                             
                             avatarsContainer.translatesAutoresizingMaskIntoConstraints = NO;
                             avatarsContainer.accessibilityIdentifier = @"readReceiptsContainer";
+                            
+                            [temporaryViews addObject:avatarsContainer];
                             
                             // Add this read receipts container in the content view
                             if (!bubbleCell.tmpSubviews)
@@ -502,6 +453,20 @@
             }
         }
         
+        // Update attachmentView bottom constraint to display reactions and read receipts if needed
+        
+        UIView *attachmentView = bubbleCell.attachmentView;
+        NSLayoutConstraint *attachmentViewBottomConstraint = bubbleCell.attachViewBottomConstraint;
+
+        if (attachmentView && temporaryViews.count)
+        {
+            attachmentViewBottomConstraint.constant = roomBubbleCellData.additionalContentHeight;
+        }
+        else if (attachmentView)
+        {
+            [bubbleCell resetAttachmentViewBottomConstraintConstant];
+        }
+        
         // Check whether an event is currently selected: the other messages are then blurred
         if (_selectedEventId)
         {
@@ -590,11 +555,19 @@
     return jitsiWidget;
 }
 
+- (void)sendVideo:(NSURL*)videoLocalURL
+          success:(void (^)(NSString *eventId))success
+          failure:(void (^)(NSError *error))failure
+{
+    UIImage *videoThumbnail = [MXKVideoThumbnailGenerator.shared generateThumbnailFrom:videoLocalURL];
+    [self sendVideo:videoLocalURL withThumbnail:videoThumbnail success:success failure:failure];
+}
+
 #pragma mark - BubbleReactionsViewModelDelegate
 
 - (void)bubbleReactionsViewModel:(BubbleReactionsViewModel *)viewModel didAddReaction:(MXReactionCount *)reactionCount forEventId:(NSString *)eventId
 {
-    [self addReaction:reactionCount.reaction forEventId:eventId success:^(NSString *eventId) {
+    [self addReaction:reactionCount.reaction forEventId:eventId success:^{
         
     } failure:^(NSError *error) {
         
@@ -608,6 +581,30 @@
     } failure:^(NSError *error) {
         
     }];
+}
+
+- (void)bubbleReactionsViewModel:(BubbleReactionsViewModel *)viewModel didShowAllTappedForEventId:(NSString * _Nonnull)eventId
+{
+    [self setShowAllReactions:YES forEvent:eventId];
+}
+
+- (void)bubbleReactionsViewModel:(BubbleReactionsViewModel *)viewModel didShowLessTappedForEventId:(NSString * _Nonnull)eventId
+{
+    [self setShowAllReactions:NO forEvent:eventId];
+}
+
+- (void)setShowAllReactions:(BOOL)showAllReactions forEvent:(NSString*)eventId
+{
+    id<MXKRoomBubbleCellDataStoring> cellData = [self cellDataOfEventWithEventId:eventId];
+    if ([cellData isKindOfClass:[RoomBubbleCellData class]])
+    {
+        RoomBubbleCellData *roomBubbleCellData = (RoomBubbleCellData*)cellData;
+
+        [roomBubbleCellData setShowAllReactions:showAllReactions forEvent:eventId];
+        [self updateCellDataReactions:roomBubbleCellData forEventId:eventId];
+
+        [self.delegate dataSource:self didCellChange:nil];
+    }
 }
 
 @end
